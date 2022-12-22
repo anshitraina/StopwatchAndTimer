@@ -65,7 +65,7 @@ h1.heading {
 p#time {
   font-size: 150px;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
     p#time{
         font-size: 60px;
         margin-left: -40px;
