@@ -57,15 +57,15 @@ div.container {
   background-color: aliceblue;
 }
 h1.heading {
-  font-size: 60px;
+  font-size: 50px;
   color: #05445e;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 p#time {
-  font-size: 150px;
+  font-size: 60px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
     p#time{
         font-size: 60px;
         margin-left: -40px;
