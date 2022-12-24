@@ -1,45 +1,112 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Timer and Stopwatch</title>
-    <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<html>
+<head>
+  
+  <link rel="stylesheet" type="text/css" href="tabs_style.css">
+  <script>
+    function change_tab(id) {
+      document.getElementById("page_content").innerHTML = document.getElementById(id + "_desc").innerHTML;
+      document.getElementById("page1").className = "notselected";
+      document.getElementById("page2").className = "notselected";
+      document.getElementById("page3").className = "notselected";
+      document.getElementById(id).className = "selected";
+    }
+  </script>
+  <style>
+    body {
+      margin: 0px auto;
+      padding: 0px;
+      font-family: helvetica;
+      height: auto;
+    }
 
-  </head>
-  <body>
+    h1 {
+      text-align: center;
+      font-size: 45px;
+      margin-top: 60px;
+      color: #BEF781;
+    }
 
-    <section>
-      <input type="checkbox" id="check">
-      <header>
-        </div>
-        <h2><a href="#" class="logo">Anshit Raina</a></h2>
-        <div class="navigation">
-          <a href="#">Home</a>
-          <a href="index.html">Stopwatch</a>
-          <a href="timer.html">Timer</a>
-          <a href="#">About</a>
-        </div>
-        <label for="check">
-        <i class="fas fa-bars menu-btn"></i>
-        <i class="fas fa-times close-btn"></i>
-        </label>
-      </header>
-      <div class="content">
-        <div class="info">
-          <h2>Time waits for<br><span>No One</span></h2>
-          <p>Use our Javascript based Stopwatch and Timer to keep a track of your time and stay ahead! </p>
-          <a href="index.html" class="info-btn">Get Started</a>
-        </div>
+    h1 p {
+      text-align: center;
+      margin: 0px;
+      font-size: 18px;
+      text-decoration: underline;
+      color: white;
+    }
+
+    #main_content {
+      margin-top: 50px;
+      width: auto;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    #main_content li {
+      display: inline;
+      list-style-type: none;
+      background-color: #688A08;
+      padding: 10px;
+      border-radius: 5px 5px 0px 0px;
+      color: #f1f823;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #main_content li.notselected {
+      background-color: #33d6d6ad;
+      color: navy;
+    }
+
+    #main_content li.selected {
+      background-color: #33d6d6ad;
+      color: navy;
+    }
+
+    #main_content .hidden_desc {
+      display: none;
+      visibility: hidden;
+    }
+
+    #main_content #page_content {
+      background: linear-gradient(to bottom, #33d6d6ad 0%, #ffffff 100%);
+      padding: 10px;
+      margin-top: 9px;
+      border-radius: 0px 5px 5px 5px;
+      color: #2E2E2E;
+      line-height: 1.6em;
+      word-spacing: 4px;
+    }
+    iframe{
+      width: 100%;
+      height: 60%;
+      border: 2px groove #2E2E2E;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <div id="main_content">
+      <li class="selected" id="page1" onclick="change_tab(this.id);">Stopwatch</li>
+      <li class="notselected" id="page2" onclick="change_tab(this.id);">Timer</li>
+      <div class='hidden_desc' id="page1_desc">
+        <iframe src="stopwatch.html" title="stopwatch"></iframe>
       </div>
-   
-      <div class="media-icons">
-        <a href="https://www.linkedin.com/in/anshitraina/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/anshitraina"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/ianshitraina/"><i class="fab fa-instagram"></i></a>
-      </div>
-    </section>
 
-  </body>
+    <div class='hidden_desc' id="page2_desc">
+      <iframe src="timer.html" title="stopwatch"></iframe>
+    </div>
+    
+    <div id="page_content">
+      <iframe src="stopwatch.html" title="stopwatch"></iframe>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>CopyRight &copy; 2022 Anshit Raina (All Rights Reserved)</p>
+  </div>
+
+</body>
+
 </html>
